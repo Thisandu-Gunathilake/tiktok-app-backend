@@ -6,8 +6,8 @@ app = Flask(__name__)
 # =========================
 # TIKTOK CONFIG
 # =========================
-CLIENT_KEY = "awp1vd9h2hk47302"
-CLIENT_SECRET = "unE8JbePXs4cJ41KNKFgNNVSb1NBChDt"
+CLIENT_KEY = "sbawqarzjnwpqvmez4"
+CLIENT_SECRET = "GDqEtbSGUKMkLVgbx3SZqfWtgWJf3fRy"
 
 REDIRECT_URI = "https://web-production-1d8f9.up.railway.app/callback"
 
