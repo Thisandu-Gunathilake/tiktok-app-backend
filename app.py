@@ -17,7 +17,7 @@ REDIRECT_URI = "https://web-production-1d8f9.up.railway.app/callback"
 # =========================
 @app.route("/")
 def home():
-    return "TikTok backend is running right now"
+    return "TikTok backend is running"
 
 
 # =========================
