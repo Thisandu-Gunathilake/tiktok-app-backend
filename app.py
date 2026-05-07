@@ -7,8 +7,8 @@ app = Flask(__name__)
 # =========================
 # TIKTOK CONFIG
 # =========================
-CLIENT_KEY = "YOUR_CLIENT_KEY"
-CLIENT_SECRET = "YOUR_CLIENT_SECRET"
+CLIENT_KEY = "sbawqarzjnwpqvmez4"
+CLIENT_SECRET = "GDqEtbSGUKMkLVgbx3SZqfWtgWJf3fRy"
 
 REDIRECT_URI = "https://web-production-1d8f9.up.railway.app/callback"
 
@@ -18,7 +18,7 @@ REDIRECT_URI = "https://web-production-1d8f9.up.railway.app/callback"
 # =========================
 @app.route("/")
 def home():
-    return "TikTok backend is running <3"
+    return "TikTok backend is running <3 2"
 
 
 # =========================
