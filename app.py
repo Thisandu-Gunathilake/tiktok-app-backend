@@ -1,13 +1,14 @@
 from flask import Flask, request
 import requests
+import os
 
 app = Flask(__name__)
 
 # =========================
 # TIKTOK CONFIG
 # =========================
-CLIENT_KEY = "sbawqarzjnwpqvmez4"
-CLIENT_SECRET = "GDqEtbSGUKMkLVgbx3SZqfWtgWJf3fRy"
+CLIENT_KEY = "YOUR_CLIENT_KEY"
+CLIENT_SECRET = "YOUR_CLIENT_SECRET"
 
 REDIRECT_URI = "https://web-production-1d8f9.up.railway.app/callback"
 
@@ -17,7 +18,7 @@ REDIRECT_URI = "https://web-production-1d8f9.up.railway.app/callback"
 # =========================
 @app.route("/")
 def home():
-    return "TikTok backend is running"
+    return "TikTok backend is running <3"
 
 
 # =========================
@@ -43,11 +44,19 @@ def callback():
 
     response = requests.post(token_url, data=data)
 
+    # =========================
+    # DEBUG OUTPUT (VERY IMPORTANT)
+    # =========================
+    print("\nSTATUS CODE:", response.status_code)
+    print("\nRESPONSE TEXT:", response.text)
+
+    # Return response to browser
     return response.text
 
 
 # =========================
-# RUN APP
+# RUN APP (RAILWAY SAFE)
 # =========================
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
